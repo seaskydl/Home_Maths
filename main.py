@@ -1,3 +1,6 @@
+from cnocr import CnOcr
+ocr = CnOcr()
+
 def welcome():
   print("Welcome to Home Maths Helper")
 
@@ -6,6 +9,9 @@ def readPic():
 
 def identifyPic():
   print("Step 2: Identify Pic")
+  file_name = "./data/huochepiao.jpeg"
+  result = ocr.ocr(file_name)
+  print("result:", result)
 
 def verify():
   print("Step 3: Verify")
